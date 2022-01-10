@@ -16,5 +16,11 @@
         "name": "FakeUser3",
         "email": "fakeuser3@gmail.com",
         "password": "password"
+    },
+    {
+        "id": 4,
+        "name": "FakeUser4",
+        "email": "fakeuser4@gmail.com",
+        "password": "password"
     }
 ]
