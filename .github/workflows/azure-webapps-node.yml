@@ -28,6 +28,10 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: './backend/server'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '14.x'                # set this to the node version to use
 
+defaults:
+ run:
+  working-directory: ./backend/server
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,7 +46,6 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        cd backend/server
         npm install
         npm run build --if-present
         npm run test --if-present
