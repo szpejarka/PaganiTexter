@@ -29,8 +29,8 @@ env:
   NODE_VERSION: '14.x'                # set this to the node version to use
 
 defaults:
- run:
-  working-directory: ./backend/server
+  run:
+    working-directory: ./backend/server
 
 jobs:
   build:
@@ -43,6 +43,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
+        cache-dependency-path: ./backend/server
 
     - name: npm install, build, and test
       run: |
