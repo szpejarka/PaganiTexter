@@ -84,7 +84,6 @@ router.put('/users/:id', function(req, res, next){
 });
 
 
-
 app.use('/api/', router);
 
 app.set('port', process.env.PORT || 3000);
